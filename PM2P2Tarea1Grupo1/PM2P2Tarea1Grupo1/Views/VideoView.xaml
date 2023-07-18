@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2P2Tarea1Grupo1.Views.VideoView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Ejercicio 2.1 PM2Grupo1"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   TextColor="Black" 
+                   FontSize = "30"/>
+
+            <Button x:Name="btnGrabarVideo"
+                    IsVisible="true"
+                    
+                    />
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>
