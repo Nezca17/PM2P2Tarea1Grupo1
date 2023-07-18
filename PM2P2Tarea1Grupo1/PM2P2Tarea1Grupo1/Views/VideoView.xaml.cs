@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 using Acr.UserDialogs;
 using System.IO;
 using System.Runtime.InteropServices;
+using Xamarin.CommunityToolkit;
 
 namespace PM2P2Tarea1Grupo1.Views
 {
@@ -34,7 +35,7 @@ namespace PM2P2Tarea1Grupo1.Views
                 await LoadVideoAsync(video);
 
                 UserDialogs.Instance.Alert($"Guardando Video {VideoPath}", "Aviso", "OK");
-                mediaElement.Source = $"ms-appx:///{VideoPath}";
+               mediaElement.Source = $"ms-appdata:///{VideoPath}";
 
             }
             catch (Exception ex)
