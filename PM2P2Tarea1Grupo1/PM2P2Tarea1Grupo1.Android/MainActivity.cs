@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.OS;
 using Acr.UserDialogs;
 using Plugin.Media;
+using Plugin.Permissions;
 
 namespace PM2P2Tarea1Grupo1.Droid
 {
@@ -24,8 +25,9 @@ namespace PM2P2Tarea1Grupo1.Droid
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-          Plugin.Permissions.PermissionsImplementatio.Current.OnRequestPermissionsResult(requestCode,permissions, grantResults);
+            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
