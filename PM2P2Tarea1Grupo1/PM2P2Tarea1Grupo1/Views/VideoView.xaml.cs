@@ -16,5 +16,10 @@ namespace PM2P2Tarea1Grupo1.Views
         {
             InitializeComponent();
         }
+
+        private void btngrabar_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
