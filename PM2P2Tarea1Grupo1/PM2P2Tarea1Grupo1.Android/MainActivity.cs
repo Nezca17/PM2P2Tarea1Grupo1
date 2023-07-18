@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -12,6 +11,7 @@ namespace PM2P2Tarea1Grupo1.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+           // UserDialogs.Init(this);
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
