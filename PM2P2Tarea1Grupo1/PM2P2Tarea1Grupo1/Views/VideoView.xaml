@@ -6,25 +6,10 @@
     <ContentPage.Content>
         <StackLayout>
 
-
-
-            <xct:MediaElement x:Name="mEVideoPlayer" AutoPlay="False" HeightRequest="200" WidthRequest="300" HorizontalOptions="Center" />
-            <Label Text="Ejercicio 2.1 PM2Grupo1"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-                   TextColor="Black" 
-                   FontSize = "30"/>
-            <Button x:Name="btngrabar" Text="Grabar" Clicked="btngrabar_Clicked" />
-            <Button x:Name="btnsalvar" Text="Guardar video" Clicked="btngrabar_Clicked"/>
-            <Label x:Name="statusLabel" HorizontalTextAlignment="Center" />
- 
-                TextColor="Black" 
-                FontSize="30"/>
-
             <xct:MediaElement
                 x:Name="mediaElement"
                 Aspect="AspectFit"
-                AutoPlay="True"
+                AutoPlay="False"
                 BackgroundColor="Black"
                 HeightRequest="200"
                 IsLooping="False"
@@ -33,7 +18,7 @@
                 Source="{Binding VideoURL}"
                 VerticalOptions="CenterAndExpand" />
 
-            <Button x:Name="btngrabar" Text="Grabar" Clicked="btngrabar_Clicked" />
+            <Button x:Name="btngrabar1" Text="Grabar" Clicked="btngrabar1_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

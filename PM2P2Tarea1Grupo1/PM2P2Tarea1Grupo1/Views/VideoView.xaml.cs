@@ -34,7 +34,7 @@ namespace PM2P2Tarea1Grupo1.Views
                 await LoadVideoAsync(video);
 
                 UserDialogs.Instance.Alert($"Guardando Video {VideoPath}", "Aviso", "OK");
-               mEVideoPlayer.Source = $"ms-appx:///{VideoPath}";
+                mediaElement.Source = $"ms-appx:///{VideoPath}";
 
             }
             catch (Exception ex)
@@ -73,7 +73,7 @@ namespace PM2P2Tarea1Grupo1.Views
 
 
 
-        private async void btngrabar_Clicked(object sender, EventArgs e)
+        private async void btngrabar1_Clicked(object sender, EventArgs e)
         {
            await GrabarVideo();
            
