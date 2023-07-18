@@ -34,7 +34,7 @@ namespace PM2P2Tarea1Grupo1.Views
                 await LoadVideoAsync(video);
 
                 UserDialogs.Instance.Alert($"Guardando Video {VideoPath}", "Aviso", "OK");
-
+               mEVideoPlayer.Source = $"ms-appx:///{VideoPath}";
 
             }
             catch (Exception ex)
@@ -49,7 +49,7 @@ namespace PM2P2Tarea1Grupo1.Views
         {
             try {
 
-
+                VideoPath = "";
                 // canceled
                 if (video == null)
                 {
@@ -57,7 +57,7 @@ namespace PM2P2Tarea1Grupo1.Views
                     return;
                 }
                 // save the file into local storage
-                var newFile = Path.Combine(FileSystem.CacheDirectory, video.FileName);
+                var newFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), video.FileName);
                 using (var stream = await video.OpenReadAsync())
                 using (var newStream = File.OpenWrite(newFile))
                     await stream.CopyToAsync(newStream);
