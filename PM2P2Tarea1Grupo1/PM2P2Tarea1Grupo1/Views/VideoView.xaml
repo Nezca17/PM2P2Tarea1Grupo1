@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:mctrl="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="PM2P2Tarea1Grupo1.Views.VideoView">
     <ContentPage.Content>
         <StackLayout>
@@ -14,7 +14,17 @@
             <Button x:Name="btngrabar" Text="Grabar" Clicked="btngrabar_Clicked" />
             <Button x:Name="btnsalvar" Text="Guardar video" Clicked="btngrabar_Clicked"/>
             <Label x:Name="statusLabel" HorizontalTextAlignment="Center" />
-           <!-- <MediaElement Source=""ShowsPlaybackControls="True" /> -->
+            <xct:MediaElement
+            x:Name="mediaElement"
+            Aspect="AspectFit"
+            AutoPlay="True"
+            BackgroundColor="Black"
+            HeightRequest="200"
+            IsLooping="False"
+            KeepScreenOn="True"
+            ShowsPlaybackControls="True"
+            Source="{Binding VideoURL}"
+            VerticalOptions="CenterAndExpand" />
         </StackLayout>
 
     </ContentPage.Content>
