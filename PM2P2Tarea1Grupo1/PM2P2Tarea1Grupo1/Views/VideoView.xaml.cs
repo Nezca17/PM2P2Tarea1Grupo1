@@ -34,6 +34,8 @@ namespace PM2P2Tarea1Grupo1.Views
                 await LoadVideoAsync(video);
 
                 UserDialogs.Instance.Alert($"Guardando Video {VideoPath}", "Aviso", "OK");
+
+
             }
             catch (Exception ex)
             {
@@ -61,15 +63,21 @@ namespace PM2P2Tarea1Grupo1.Views
                     await stream.CopyToAsync(newStream);
 
                 VideoPath = newFile;
+
+           
             }
             catch (Exception ex) {
                 UserDialogs.Instance.Alert($"{ex}", "Aviso", "OK");
             }
         }
 
+
+
         private async void btngrabar_Clicked(object sender, EventArgs e)
         {
            await GrabarVideo();
+           
         }
     }
+    
 }
