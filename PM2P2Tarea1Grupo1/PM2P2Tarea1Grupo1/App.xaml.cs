@@ -1,5 +1,7 @@
-﻿using System;
+﻿using PM2P2Tarea1Grupo1.Views;
+using System;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +13,8 @@ namespace PM2P2Tarea1Grupo1
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new VideoView());
+
         }
 
         protected override void OnStart()
@@ -25,5 +28,9 @@ namespace PM2P2Tarea1Grupo1
         protected override void OnResume()
         {
         }
+
+ 
+
+
     }
 }
