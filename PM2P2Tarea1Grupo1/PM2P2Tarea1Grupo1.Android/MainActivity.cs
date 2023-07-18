@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.OS;
 using Acr.UserDialogs;
 
+
 namespace PM2P2Tarea1Grupo1.Droid
 {
     [Activity(Label = "PM2P2Tarea1Grupo1", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
