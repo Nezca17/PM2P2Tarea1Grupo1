@@ -15,8 +15,6 @@
             <Button x:Name="btnsalvar" Text="Guardar video" Clicked="btngrabar_Clicked"/>
             <Label x:Name="statusLabel" HorizontalTextAlignment="Center" />
            <!-- <MediaElement Source=""ShowsPlaybackControls="True" /> -->
-
-            
         </StackLayout>
 
     </ContentPage.Content>
