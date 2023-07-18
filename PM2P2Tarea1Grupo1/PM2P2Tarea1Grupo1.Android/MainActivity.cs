@@ -3,6 +3,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Acr.UserDialogs;
 using Plugin.Media;
 
 namespace PM2P2Tarea1Grupo1.Droid
@@ -12,7 +13,7 @@ namespace PM2P2Tarea1Grupo1.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-           // UserDialogs.Init(this);
+           UserDialogs.Init(this);
             base.OnCreate(savedInstanceState);
 
           //  Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
