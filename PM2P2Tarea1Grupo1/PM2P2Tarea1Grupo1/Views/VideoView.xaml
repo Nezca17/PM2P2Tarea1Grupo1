@@ -10,7 +10,7 @@
                 HorizontalOptions="CenterAndExpand"
                    TextColor="Black" 
                    FontSize = "30"/>
-
+            <mctrl:MediaElement x:Name="media" Source="" Aspect="AspectFill" ShowsPlaybackControls="True"/> 
             <Button x:Name="btngrabar" Text="Grabar" Clicked="btngrabar_Clicked" />
             <Button x:Name="btnsalvar" Text="Guardar video" Clicked="btngrabar_Clicked"/>
             <Label x:Name="statusLabel" HorizontalTextAlignment="Center" />

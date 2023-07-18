@@ -15,6 +15,7 @@ namespace PM2P2Tarea1Grupo1
 
             MainPage = new NavigationPage(new VideoView());
 
+
         }
 
         protected override void OnStart()
