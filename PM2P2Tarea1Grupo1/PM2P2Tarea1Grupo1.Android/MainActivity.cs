@@ -3,6 +3,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Acr.UserDialogs;
 
 namespace PM2P2Tarea1Grupo1.Droid
 {
@@ -11,7 +12,7 @@ namespace PM2P2Tarea1Grupo1.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-           // UserDialogs.Init(this);
+           UserDialogs.Init(this);
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
