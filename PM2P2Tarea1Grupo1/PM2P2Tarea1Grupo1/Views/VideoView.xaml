@@ -6,9 +6,17 @@
     <ContentPage.Content>
         <StackLayout>
 
+            <xct:MediaElement
+                x:Name="mediaElement"
+                Aspect="AspectFit"
+                AutoPlay="True"
+                BackgroundColor="Black"
+                HeightRequest="200"
+                IsLooping="False"
+                KeepScreenOn="True"
+                ShowsPlaybackControls="True"
+                VerticalOptions="CenterAndExpand" />
 
-
-            <xct:MediaElement x:Name="mEVideoPlayer" AutoPlay="False" HeightRequest="200" WidthRequest="300" HorizontalOptions="Center" />
             <Label Text="Ejercicio 2.1 PM2Grupo1"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"

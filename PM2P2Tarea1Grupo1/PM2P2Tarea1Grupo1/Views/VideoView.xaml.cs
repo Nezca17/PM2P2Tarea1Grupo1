@@ -10,6 +10,7 @@ using Acr.UserDialogs;
 using System.IO;
 using System.Runtime.InteropServices;
 using Xamarin.CommunityToolkit;
+using Xamarin.CommunityToolkit.Core;
 
 namespace PM2P2Tarea1Grupo1.Views
 {
@@ -17,64 +18,47 @@ namespace PM2P2Tarea1Grupo1.Views
     public partial class VideoView : ContentPage
     {
 
-
-
         public VideoView()
         {
             InitializeComponent();
         }
 
         string VideoPath;
+        static string DEFAULTPATH = "/storage/emulated/0/Android/data/com.companyname.pm2p2tarea1grupo1/files";
 
-        public async Task GrabarVideo()
+        private async void btngrabar_Clicked(object sender, EventArgs e)
         {
+          string path= await GrabarVideo2("Video1");
+            UserDialogs.Instance.Alert($"Guardando Video {path}", "Aviso", "OK");
+            mediaElement.Source = new FileMediaSource {
+                File = path
+            };
+        }
+
+        public async Task<string> GrabarVideo2(string filename)
+        {
+
             try
             {
-                var video = await MediaPicker.CaptureVideoAsync();
+                FileResult videoGrabado = await MediaPicker.CaptureVideoAsync();
 
-                await LoadVideoAsync(video);
-
-                UserDialogs.Instance.Alert($"Guardando Video {VideoPath}", "Aviso", "OK");
-               mediaElement.Source = $"ms-appdata:///{VideoPath}";
-
-            }
-            catch (Exception ex)
-            {
-
-                UserDialogs.Instance.Alert($"{ex}", "Aviso", "OK");
-            }
-          
-
-        }
-        async Task LoadVideoAsync(FileResult video)
-        {
-            try {
-
-                VideoPath = "";
-                // canceled
-                if (video == null)
-                {
-                    VideoPath = null;
-                    return;
-                }
-                // save the file into local storage
-                var newFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), video.FileName);
-                using (var stream = await video.OpenReadAsync())
-                using (var newStream = File.OpenWrite(newFile))
+                var file = Path.Combine(DEFAULTPATH, videoGrabado.FileName);
+                using (var stream = await videoGrabado.OpenReadAsync())
+                using (var newStream = File.OpenWrite(file))
                     await stream.CopyToAsync(newStream);
 
-                VideoPath = newFile;
-
-           
+                return file;
             }
-            catch (Exception ex) {
-                UserDialogs.Instance.Alert($"{ex}", "Aviso", "OK");
+            catch (Exception e) {
+
+                UserDialogs.Instance.Alert($"File{e}","Aviso","Ok");
+                return "";
             }
         }
 
 
 
-        private async void btngrabar1_Clicked(object sender, EventArgs e)
+        private async void btngrabar_Clicked(object sender, EventArgs e)
         {
            await GrabarVideo();
            
