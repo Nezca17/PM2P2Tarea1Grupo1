@@ -57,12 +57,6 @@ namespace PM2P2Tarea1Grupo1.Views
         }
 
 
-
-        private async void btngrabar_Clicked(object sender, EventArgs e)
-        {
-           await GrabarVideo();
-           
-        }
     }
     
 }

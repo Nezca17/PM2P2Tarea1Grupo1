@@ -27,19 +27,6 @@
             <Label x:Name="statusLabel" HorizontalTextAlignment="Center" />
  
 
-
-            <xct:MediaElement
-                x:Name="mediaElement"
-                Aspect="AspectFit"
-                AutoPlay="False"
-                BackgroundColor="Black"
-                HeightRequest="200"
-                IsLooping="False"
-                KeepScreenOn="True"
-                ShowsPlaybackControls="True"
-                Source="{Binding VideoURL}"
-                VerticalOptions="CenterAndExpand" />
-
             <Button x:Name="btngrabar1" Text="Grabar" Clicked="btngrabar1_Clicked" />
         </StackLayout>
     </ContentPage.Content>
