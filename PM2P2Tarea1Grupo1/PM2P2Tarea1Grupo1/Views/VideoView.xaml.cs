@@ -23,7 +23,7 @@ namespace PM2P2Tarea1Grupo1.Views
             InitializeComponent();
         }
 
-        string VideoPath;
+
         static string DEFAULTPATH = "/storage/emulated/0/Android/data/com.companyname.pm2p2tarea1grupo1/files";
 
         private async void btngrabar_Clicked(object sender, EventArgs e)

@@ -27,7 +27,6 @@
             <Label x:Name="statusLabel" HorizontalTextAlignment="Center" />
  
 
-            <Button x:Name="btngrabar1" Text="Grabar" Clicked="btngrabar1_Clicked" />
-        </StackLayout>
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>
