@@ -9,16 +9,24 @@
             <xct:MediaElement
                 x:Name="mediaElement"
                 Aspect="AspectFit"
-                AutoPlay="False"
+                AutoPlay="True"
                 BackgroundColor="Black"
                 HeightRequest="200"
                 IsLooping="False"
                 KeepScreenOn="True"
                 ShowsPlaybackControls="True"
-                Source="{Binding VideoURL}"
                 VerticalOptions="CenterAndExpand" />
 
-            <Button x:Name="btngrabar1" Text="Grabar" Clicked="btngrabar1_Clicked" />
-        </StackLayout>
+            <Label Text="Ejercicio 2.1 PM2Grupo1"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand"
+                   TextColor="Black" 
+                   FontSize = "30"/>
+            <Button x:Name="btngrabar" Text="Grabar" Clicked="btngrabar_Clicked" />
+            <Button x:Name="btnsalvar" Text="Guardar video" Clicked="btngrabar_Clicked"/>
+            <Label x:Name="statusLabel" HorizontalTextAlignment="Center" />
+ 
+
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>
